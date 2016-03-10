@@ -60,10 +60,6 @@ PRODUCT_COPY_FILES += \
     	$(LOCAL_PATH)/configs/android.hardware.camera.xml:system/etc/permissions/android.hardware.camera.xml \
 	$(LOCAL_PATH)/configs/platform.xml:system/etc/permissions/platform.xml
     
-# CM's Snap camera
-PRODUCT_PACKAGES += \
-	Snap
-
 
 # Bluetooth
 PRODUCT_PACKAGES += \
@@ -140,11 +136,6 @@ PRODUCT_PACKAGES += \
 # GPS
 PRODUCT_COPY_FILES += \
      	$(LOCAL_PATH)/configs/agps_profiles_conf2.xml:system/etc/agps_profiles_conf2.xml 
-
-# FM Radio
-PRODUCT_PACKAGES += \
-     	FMRadio \
-     	libfmjni
 
 # Media	
 PRODUCT_COPY_FILES += \
