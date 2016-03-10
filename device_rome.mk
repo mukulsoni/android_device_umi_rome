@@ -5,37 +5,37 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
-$(call inherit-product, vendor/elephone/p8000/p8000-vendor.mk)
+$(call inherit-product, vendor/umi/rome/rome-vendor.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/elephone/p8000/overlay
+DEVICE_PACKAGE_OVERLAYS += device/umi/rome/overlay
 
 # Recovery allowed devices
-TARGET_OTA_ASSERT_DEVICE := p8000,k05ts_a
+TARGET_OTA_ASSERT_DEVICE := rome,n325bh
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-	LOCAL_KERNEL := device/elephone/p8000/prebuilt/kernel
+	LOCAL_KERNEL := device/umi/rome/prebuilt/kernel
 else
 	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
 
 # init.rc's
 PRODUCT_COPY_FILES += \
-	device/elephone/p8000/rootdir/init.mt6735.rc:root/init.mt6735.rc \
-	device/elephone/p8000/rootdir/init.ssd.rc:root/init.ssd.rc \
-	device/elephone/p8000/rootdir/init.xlog.rc:root/init.xlog.rc \
-	device/elephone/p8000/rootdir/init.rc:root/init.rc \
-	device/elephone/p8000/rootdir/init.mt6735.usb.rc:root/init.mt6735.usb.rc \
-	device/elephone/p8000/rootdir/init.recovery.mt6735.rc:root/init.recovery.mt6735.rc \
-	device/elephone/p8000/rootdir/init.aee.rc:root/init.aee.rc \
-	device/elephone/p8000/rootdir/init.project.rc:root/init.project.rc \
-	device/elephone/p8000/rootdir/init.modem.rc:root/init.modem.rc \
-	device/elephone/p8000/recovery/root/fstab.mt6753:root/fstab.mt6735  \
-	device/elephone/p8000/rootdir/ueventd.mt6735.rc:root/ueventd.mt6735.rc \
-	device/elephone/p8000/rootdir/factory_init.rc:root/factory_init.rc \
-	device/elephone/p8000/rootdir/factory_init.project.rc:root/factory_init.project.rc \
-	device/elephone/p8000/rootdir/meta_init.project.rc:root/meta_init.project.rc \
-	device/elephone/p8000/rootdir/meta_init.modem.rc:root/meta_init.modem.rc \
-	device/elephone/p8000/rootdir/meta_init.rc:root/meta_init.rc 
+	device/umi/rome/rootdir/init.mt6735.rc:root/init.mt6735.rc \
+	device/umi/rome/rootdir/init.ssd.rc:root/init.ssd.rc \
+	device/umi/rome/rootdir/init.xlog.rc:root/init.xlog.rc \
+	device/umi/rome/rootdir/init.rc:root/init.rc \
+	device/umi/rome/rootdir/init.mt6735.usb.rc:root/init.mt6735.usb.rc \
+	device/umi/rome/rootdir/init.recovery.mt6735.rc:root/init.recovery.mt6735.rc \
+	device/umi/rome/rootdir/init.aee.rc:root/init.aee.rc \
+	device/umi/rome/rootdir/init.project.rc:root/init.project.rc \
+	device/umi/rome/rootdir/init.modem.rc:root/init.modem.rc \
+	device/umi/rome/recovery/root/fstab.mt6753:root/fstab.mt6735  \
+	device/umi/rome/rootdir/ueventd.mt6735.rc:root/ueventd.mt6735.rc \
+	device/umi/rome/rootdir/factory_init.rc:root/factory_init.rc \
+	device/umi/rome/rootdir/factory_init.project.rc:root/factory_init.project.rc \
+	device/umi/rome/rootdir/meta_init.project.rc:root/meta_init.project.rc \
+	device/umi/rome/rootdir/meta_init.modem.rc:root/meta_init.modem.rc \
+	device/umi/rome/rootdir/meta_init.rc:root/meta_init.rc 
 
 # hardware specifics
 PRODUCT_COPY_FILES += \
@@ -159,7 +159,7 @@ PRODUCT_COPY_FILES += \
 
 
 PRODUCT_COPY_FILES += \
-    	device/elephone/p8000/rootdir/etc/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf \
+    	device/umi/rome/rootdir/etc/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf \
 
 # limit dex2oat threads to improve thermals
 PRODUCT_PROPERTY_OVERRIDES += \

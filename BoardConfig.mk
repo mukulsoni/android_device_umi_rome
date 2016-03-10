@@ -1,7 +1,7 @@
 # inherit from the proprietary version
--include vendor/elephone/p8000/BoardConfigVendor.mk
+-include vendor/umi/rome/BoardConfigVendor.mk
  
-TARGET_SPECIFIC_HEADER_PATH := device/elephone/p8000/include
+TARGET_SPECIFIC_HEADER_PATH := device/umi/rome/include
  
 # Link against libxlog
 TARGET_LDPRELOAD += libxlog.so
@@ -68,20 +68,20 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x03f88000 --tags_offset 0x0df88000
  
 # build kernel from source
-TARGET_KERNEL_SOURCE := kernel/elephone/p8000
+TARGET_KERNEL_SOURCE := kernel/umi/rome
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_CONFIG := cyanogenmod_p8000_defconfig
+TARGET_KERNEL_CONFIG := cyanogenmod_rome_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 MTK_APPENDED_DTB_SUPPORT := yes
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
  
 # prebuild kernel as fallback
-#TARGET_PREBUILT_KERNEL := device/elephone/p8000/prebuilt/kernel
+#TARGET_PREBUILT_KERNEL := device/umi/rome/prebuilt/kernel
 BOARD_HAS_NO_SELECT_BUTTON := true
 
 # system.prop
-TARGET_SYSTEM_PROP := device/elephone/p8000/system.prop
+TARGET_SYSTEM_PROP := device/umi/rome/system.prop
 
 # WiFi
 WPA_SUPPLICANT_VERSION := VER_0_8_X
@@ -102,7 +102,7 @@ BOARD_USES_LEGACY_MTK_AV_BLOB := true
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_MTK := true
 BOARD_BLUETOOTH_DOES_NOT_USE_RFKILL := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/elephone/p8000/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/umi/rome/bluetooth
 
 # GPS
 BOARD_GPS_LIBRARIES :=true
@@ -124,11 +124,11 @@ COMMON_GLOBAL_CPPFLAGS += -DMTK_HARDWARE
 
 #EGL settings
 USE_OPENGL_RENDERER := true
-BOARD_EGL_CFG := device/elephone/p8000/egl.cfg
+BOARD_EGL_CFG := device/umi/rome/egl.cfg
 
 # recovery
-#TARGET_RECOVERY_INITRC := device/elephone/p8000/recovery/init.mt6753.rc
-TARGET_RECOVERY_FSTAB := device/elephone/p8000/recovery/root/fstab.mt6753
+#TARGET_RECOVERY_INITRC := device/umi/rome/recovery/init.mt6753.rc
+TARGET_RECOVERY_FSTAB := device/umi/rome/recovery/root/fstab.mt6753
 TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brightness\"
 
 #twrp ( WIP do not use!!! see comments )
